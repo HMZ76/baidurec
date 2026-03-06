@@ -2,3 +2,4 @@ data
 slurm-*
 runs
 checkpoints
+*.pyc

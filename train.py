@@ -91,8 +91,8 @@ def main():
             metrics = evaluate(model, test_loader, device)
             print(f"\n[Epoch {epoch}] Avg Loss: {avg_loss:.4f} | Metrics: {metrics}")
 
-        for k, v in metrics.items():
-            writer.add_scalar(f'Metrics/{k}', v, epoch)
+            for k, v in metrics.items():
+                writer.add_scalar(f'Metrics/{k}', v, epoch)
 
         save_dir = f"./checkpoints/{args.num_blocks}layer_{args.num_heads}head"
         os.makedirs(save_dir, exist_ok=True)
